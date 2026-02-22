@@ -4,28 +4,22 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Hussnain Canvas</title>
+
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
-html{
-scroll-behavior:smooth;
-}
+html{scroll-behavior:smooth;}
 body{
 margin:0;
 font-family:Poppins, sans-serif;
 background:#0a0a0a;
 color:white;
 }
-section{
-padding:90px 8%;
-}
-h1,h2{
-margin:0;
-font-weight:900;
-letter-spacing:0.5px;
-}
+section{padding:90px 8%;}
+h1,h2{margin:0;font-weight:900;}
 
-/* ================= HERO ================= */
+/* HERO */
 .hero{
 min-height:100vh;
 display:flex;
@@ -37,17 +31,13 @@ justify-content:space-between;
 align-items:center;
 width:100%;
 }
-.hero-text{
-max-width:520px;
-}
+.hero-text{max-width:520px;}
 .hero h1{
 font-size:64px;
 line-height:1.1;
 margin-bottom:25px;
 }
-.blue-text{
-color:#00bfff;
-}
+.blue-text{color:#00bfff;}
 .hero p{
 color:#bbbbbb;
 margin-bottom:35px;
@@ -61,22 +51,14 @@ text-decoration:none;
 display:inline-block;
 font-weight:600;
 margin-right:12px;
-transition:0.3s;
+transition:.3s;
 cursor:pointer;
 }
-.primary{
-background:#00bfff;
-color:black;
-}
-.secondary{
-border:1px solid #00bfff;
-color:#00bfff;
-}
-.btn:hover{
-transform:scale(1.05);
-}
+.primary{background:#00bfff;color:black;}
+.secondary{border:1px solid #00bfff;color:#00bfff;}
+.btn:hover{transform:scale(1.05);}
 
-/* FLOATING IMAGES */
+/* HERO IMAGES */
 .hero-images{
 position:relative;
 width:650px;
@@ -98,19 +80,13 @@ box-shadow:0 15px 35px rgba(0,0,0,0.6);
 50%{transform:translateY(-25px);}
 }
 
-/* ================= FEATURED ================= */
-.featured-heading{
-text-align:center;
-margin-bottom:60px;
-}
-.featured-heading h2{
-font-size:46px;
-}
+/* FEATURED */
+.featured-heading{text-align:center;margin-bottom:60px;}
+.featured-heading h2{font-size:46px;}
 .ctr-line{
 color:#00bfff;
 font-weight:600;
 margin-top:15px;
-letter-spacing:1px;
 }
 .grid{
 display:grid;
@@ -121,14 +97,14 @@ gap:28px;
 width:100%;
 border-radius:18px;
 cursor:pointer;
-transition:0.4s ease;
+transition:.4s;
 }
 .grid img:hover{
 transform:scale(1.07);
 box-shadow:0 0 40px rgba(0,191,255,1);
 }
 
-/* ================= ABOUT ================= */
+/* ABOUT */
 .about{
 display:grid;
 grid-template-columns:1.2fr 0.8fr;
@@ -154,28 +130,56 @@ border-radius:18px;
 box-shadow:0 15px 35px rgba(0,0,0,0.6);
 }
 
-/* ================= BEFORE AFTER ================= */
-.before-after{
-text-align:center;
-}
+/* BEFORE AFTER */
+.before-after{text-align:center;}
 .before-after h2{
 font-size:44px;
 margin-bottom:60px;
 }
-.slider{
-max-width:750px;
-margin:0 auto 40px;
-}
-.slider img{
-width:100%;
+.compare-container{
+position:relative;
+max-width:800px;
+margin:0 auto 60px;
+overflow:hidden;
 border-radius:18px;
-box-shadow:0 15px 30px rgba(0,0,0,0.6);
+box-shadow:0 15px 35px rgba(0,0,0,0.6);
+}
+.compare-container img{
+width:100%;
+display:block;
+}
+.after-image{
+position:absolute;
+top:0;
+left:0;
+height:100%;
+width:50%;
+overflow:hidden;
+}
+.slider-line{
+position:absolute;
+top:0;
+left:50%;
+width:3px;
+height:100%;
+background:#00bfff;
+cursor:ew-resize;
+}
+.slider-button{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+background:#00bfff;
+color:black;
+padding:10px 14px;
+border-radius:50%;
+font-weight:bold;
+cursor:ew-resize;
 }
 
-/* ================= CONTACT ================= */
-.contact{
-text-align:center;
-}
+/* CONTACT */
+.contact{text-align:center;}
 .contact h2{
 font-size:46px;
 margin-bottom:20px;
@@ -199,31 +203,39 @@ border:1px solid #1f1f1f;
 background:#111;
 color:white;
 font-family:Poppins;
-font-size:15px;
 }
 input:focus,textarea:focus{
 outline:none;
 border:1px solid #00bfff;
 box-shadow:0 0 15px rgba(0,191,255,0.4);
 }
-textarea{
-resize:none;
-height:120px;
+textarea{resize:none;height:120px;}
+button{
+padding:14px;
+border:none;
+border-radius:30px;
+background:#00bfff;
+font-weight:700;
+cursor:pointer;
 }
+button:hover{transform:scale(1.05);}
+
+/* SOCIAL */
 .social{
 margin-top:40px;
 }
 .social a{
 margin:0 15px;
 color:#00bfff;
-text-decoration:none;
-font-weight:500;
+font-size:22px;
+transition:.3s;
 }
 .social a:hover{
-text-decoration:underline;
+color:white;
+transform:scale(1.2);
 }
 
-/* ================= LIGHTBOX ================= */
+/* LIGHTBOX */
 #lightbox{
 position:fixed;
 top:0;
@@ -243,12 +255,9 @@ max-height:90%;
 border-radius:16px;
 }
 
-/* ================= RESPONSIVE ================= */
+/* RESPONSIVE */
 @media(max-width:900px){
-.hero-container{
-flex-direction:column;
-text-align:center;
-}
+.hero-container{flex-direction:column;text-align:center;}
 .hero-images{
 margin-top:50px;
 width:100%;
@@ -262,28 +271,14 @@ position:static;
 width:30%;
 animation:none;
 }
-.grid{
-grid-template-columns:repeat(2,1fr);
-}
-.about{
-grid-template-columns:1fr;
-text-align:center;
-}
-.about-image img{
-width:60%;
-margin:auto;
-}
+.grid{grid-template-columns:repeat(2,1fr);}
+.about{grid-template-columns:1fr;text-align:center;}
+.about-image img{width:60%;margin:auto;}
 }
 @media(max-width:600px){
-.grid{
-grid-template-columns:1fr;
-}
-section{
-padding:70px 6%;
-}
-.hero h1{
-font-size:40px;
-}
+.grid{grid-template-columns:1fr;}
+section{padding:70px 6%;}
+.hero h1{font-size:40px;}
 }
 </style>
 </head>
@@ -293,17 +288,11 @@ font-size:40px;
 <section class="hero">
 <div class="hero-container">
 <div class="hero-text">
-<h1>
-Thumbnails That Get 
-<span class="blue-text">Clicks</span>
-</h1>
-<p>
-I design <strong>high converting YouTube thumbnails</strong> that increase CTR and grab attention instantly.
-</p>
+<h1>Thumbnails That Get <span class="blue-text">Clicks</span></h1>
+<p>I design <strong>high converting YouTube thumbnails</strong> that increase CTR and grab attention instantly.</p>
 <a href="#featured" class="btn primary">View My Work</a>
 <a href="#contact" class="btn secondary">Hire Me</a>
 </div>
-
 <div class="hero-images">
 <img src="https://iili.io/qJ6jKGe.jpg" class="img1">
 <img src="https://iili.io/qJ6j2Z7.jpg" class="img2">
@@ -336,9 +325,9 @@ I design <strong>high converting YouTube thumbnails</strong> that increase CTR a
 <div class="about-text">
 <h2>About Me</h2>
 <p>
-I am a professional <strong>YouTube Thumbnail Designer</strong> specializing in bold, high‑impact visuals that increase engagement and CTR.
+I am a professional <strong>YouTube Thumbnail Designer</strong> specializing in bold visuals that increase engagement and CTR.
 <br><br>
-<span class="goal-highlight">My goal is simple:</span> Create thumbnails that look powerful and deliver real measurable results.
+<span class="goal-highlight">My goal is simple:</span> Create thumbnails that deliver real measurable results.
 </p>
 </div>
 <div class="about-image">
@@ -349,12 +338,25 @@ I am a professional <strong>YouTube Thumbnail Designer</strong> specializing in 
 <!-- BEFORE AFTER -->
 <section class="before-after">
 <h2>Before & After</h2>
-<div class="slider">
-<img src="https://iili.io/qdHjWs1.jpg">
+
+<div class="compare-container" id="compare1">
+<img src="https://freeimage.host/i/qdHjWs1">
+<div class="after-image">
+<img src="https://freeimage.host/i/qJPg0FV">
 </div>
-<div class="slider">
-<img src="https://iili.io/qdHg9El.jpg">
+<div class="slider-line"></div>
+<div class="slider-button"><i class="fas fa-arrows-left-right"></i></div>
 </div>
+
+<div class="compare-container" id="compare2">
+<img src="https://freeimage.host/i/qdHg9El">
+<div class="after-image">
+<img src="https://freeimage.host/i/qdHgfTu">
+</div>
+<div class="slider-line"></div>
+<div class="slider-button"><i class="fas fa-arrows-left-right"></i></div>
+</div>
+
 </section>
 
 <!-- CONTACT -->
@@ -366,37 +368,46 @@ I am a professional <strong>YouTube Thumbnail Designer</strong> specializing in 
 <input type="text" placeholder="Name">
 <input type="email" placeholder="Email">
 <textarea placeholder="Message"></textarea>
-<button class="btn primary">Send Message</button>
+<button type="submit">Send Message</button>
 </form>
 
 <div class="social">
-<a href="mailto:hussnaincanvasofficial@gmail.com">Email</a>
-<a href="https://www.instagram.com/hussnain._.canvas/" target="_blank">Instagram</a>
-<a href="https://www.fiverr.com/s/LdAaKgp" target="_blank">Fiverr</a>
-<a href="https://www.linkedin.com/in/hussnaincanvas/" target="_blank">LinkedIn</a>
+<a href="mailto:hussnaincanvasofficial@gmail.com"><i class="fas fa-envelope"></i></a>
+<a href="https://www.instagram.com/hussnain._.canvas/" target="_blank"><i class="fab fa-instagram"></i></a>
+<a href="https://www.fiverr.com/s/LdAaKgp" target="_blank"><i class="fas fa-briefcase"></i></a>
+<a href="https://www.linkedin.com/in/hussnaincanvas/" target="_blank"><i class="fab fa-linkedin"></i></a>
 </div>
 </section>
 
-<!-- LIGHTBOX -->
-<div id="lightbox">
-<img id="lightbox-img">
-</div>
-
 <script>
-const images = document.querySelectorAll(".grid img");
-const lightbox = document.getElementById("lightbox");
-const lightboxImg = document.getElementById("lightbox-img");
+function initCompare(container){
+const after = container.querySelector(".after-image");
+const line = container.querySelector(".slider-line");
+const button = container.querySelector(".slider-button");
 
-images.forEach(img => {
-img.addEventListener("click", () => {
-lightbox.style.display = "flex";
-lightboxImg.src = img.src;
-});
-});
+let isDragging = false;
 
-lightbox.addEventListener("click", () => {
-lightbox.style.display = "none";
+button.addEventListener("mousedown", ()=> isDragging = true);
+window.addEventListener("mouseup", ()=> isDragging = false);
+
+window.addEventListener("mousemove", (e)=>{
+if(!isDragging) return;
+
+let rect = container.getBoundingClientRect();
+let offsetX = e.clientX - rect.left;
+if(offsetX < 0) offsetX = 0;
+if(offsetX > rect.width) offsetX = rect.width;
+
+let percent = (offsetX / rect.width) * 100;
+
+after.style.width = percent + "%";
+line.style.left = percent + "%";
+button.style.left = percent + "%";
 });
+}
+
+initCompare(document.getElementById("compare1"));
+initCompare(document.getElementById("compare2"));
 </script>
 
 </body>

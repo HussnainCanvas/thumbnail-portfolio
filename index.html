@@ -7,176 +7,229 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700;900&display=swap" rel="stylesheet">
 
 <style>
-html{scroll-behavior:smooth;}
+
+html{
+scroll-behavior:smooth;
+}
+
 body{
 margin:0;
 font-family:Poppins, sans-serif;
-background:linear-gradient(180deg,#0a0a0a,#111827);
+background:#0f172a;
 color:white;
 }
-section{padding:100px 8%;}
+
+section{
+padding:100px 8%;
+}
 
 /* HERO */
-.hero{min-height:100vh;display:flex;align-items:center;}
-.hero-container{display:flex;justify-content:space-between;align-items:center;width:100%;}
-.hero-text{max-width:550px;}
-.hero h1{font-size:64px;font-weight:900;line-height:1.1;margin-bottom:20px;}
-.blue-text{color:#00bfff;}
-.hero p{color:#b0b0b0;margin-bottom:30px;font-size:18px;}
+.hero{
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+}
+
+.hero h1{
+font-size:60px;
+font-weight:900;
+margin-bottom:20px;
+}
+
+.blue-text{
+color:#00bfff;
+}
+
+.hero p{
+color:#cbd5e1;
+font-size:18px;
+margin-bottom:30px;
+}
+
 .btn{
-padding:15px 30px;
+padding:14px 30px;
 border-radius:40px;
 text-decoration:none;
 display:inline-block;
 font-weight:600;
-margin-right:15px;
-transition:0.4s ease;
-cursor:pointer;
+margin:10px;
+transition:0.3s;
 }
+
 .primary{
 background:#00bfff;
 color:black;
-box-shadow:0 0 20px rgba(0,191,255,0.6);
 }
-.primary:hover{
-box-shadow:0 0 40px rgba(0,191,255,1);
-transform:translateY(-3px);
-}
+
 .secondary{
 border:1px solid #00bfff;
 color:#00bfff;
 }
-.secondary:hover{
-background:#00bfff;
-color:black;
+
+.btn:hover{
+transform:scale(1.05);
 }
 
 /* FEATURED */
-.featured-heading{text-align:center;margin-bottom:60px;}
-.featured-heading h2{font-size:44px;font-weight:900;}
-.ctr-line{color:#00bfff;font-weight:600;margin-top:12px;}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;}
-.grid img{
-width:100%;
-border-radius:18px;
-cursor:pointer;
-transition:0.4s ease;
-}
-.grid img:hover{
-transform:scale(1.08);
-box-shadow:0 0 45px rgba(0,191,255,1);
+.featured-heading{
+text-align:center;
+margin-bottom:60px;
 }
 
-/* BEFORE AFTER SECTION */
-.before-after h2{
-text-align:center;
+.featured-heading h2{
 font-size:42px;
 font-weight:900;
-margin-bottom:70px;
 }
 
-.compare-box{
-max-width:850px;
-margin:0 auto 80px auto;
-position:relative;
-overflow:hidden;
-border-radius:20px;
-box-shadow:0 20px 50px rgba(0,0,0,0.6);
+.ctr-line{
+color:#00bfff;
+margin-top:10px;
+font-weight:600;
 }
 
-.compare-slider{
-display:flex;
-width:200%;
-animation:slide 7s infinite;
+.grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:25px;
 }
 
-.compare-slider img{
+.grid img{
 width:100%;
+border-radius:16px;
+transition:0.3s;
+}
+
+.grid img:hover{
+transform:scale(1.07);
+box-shadow:0 0 35px rgba(0,191,255,0.8);
+}
+
+/* BEFORE AFTER */
+.before-after{
+text-align:center;
+}
+
+.compare{
+max-width:900px;
+margin:0 auto 80px auto;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:20px;
+}
+
+.compare img{
+width:100%;
+border-radius:16px;
+box-shadow:0 10px 30px rgba(0,0,0,0.5);
 }
 
 .label{
-position:absolute;
-top:20px;
-background:#00bfff;
-color:black;
-padding:8px 16px;
-border-radius:20px;
+margin-bottom:10px;
 font-weight:700;
-}
-
-.label.before{left:20px;}
-.label.after{right:20px;}
-
-@keyframes slide{
-0%{transform:translateX(0);}
-45%{transform:translateX(0);}
-55%{transform:translateX(-50%);}
-100%{transform:translateX(-50%);}
+color:#00bfff;
 }
 
 /* ABOUT */
 .about{
 display:grid;
 grid-template-columns:1.2fr 0.8fr;
-gap:80px;
+gap:60px;
 align-items:center;
 }
+
 .about-text h2{
 font-size:42px;
 font-weight:900;
-margin-bottom:25px;
+margin-bottom:20px;
 }
+
 .about-text p{
-color:#c0c0c0;
-line-height:1.9;
-font-size:18px;
+color:#cbd5e1;
+line-height:1.8;
+font-size:17px;
 }
+
 .goal-highlight{
 color:#00bfff;
 font-weight:700;
-font-size:20px;
 }
+
 .about-image img{
 width:80%;
-border-radius:18px;
-box-shadow:0 20px 40px rgba(0,0,0,0.6);
+border-radius:16px;
 }
 
 /* CONTACT */
+.contact{
+text-align:center;
+}
+
 .contact form{
+max-width:400px;
+margin:auto;
 display:flex;
 flex-direction:column;
-max-width:450px;
-gap:18px;
+gap:15px;
 }
-input,textarea{
-padding:15px;
+
+input, textarea{
+padding:14px;
 border:none;
-border-radius:10px;
+border-radius:8px;
 font-family:Poppins;
-background:#1f2937;
-color:white;
 }
-input:focus,textarea:focus{outline:2px solid #00bfff;}
+
+button{
+cursor:pointer;
+}
+
+.social{
+margin-top:20px;
+}
+
 .social a{
-margin-right:20px;
 color:#00bfff;
+margin:0 10px;
 text-decoration:none;
 }
-.social a:hover{text-decoration:underline;}
 
 /* RESPONSIVE */
-@media(max-width:1000px){
-.hero-container{flex-direction:column;text-align:center;}
-.grid{grid-template-columns:repeat(2,1fr);}
-.about{grid-template-columns:1fr;text-align:center;}
-.about-image img{width:60%;margin:auto;}
+@media(max-width:900px){
+
+.grid{
+grid-template-columns:repeat(2,1fr);
 }
+
+.about{
+grid-template-columns:1fr;
+text-align:center;
+}
+
+.about-image img{
+width:60%;
+margin:auto;
+}
+
+.compare{
+grid-template-columns:1fr;
+}
+
+}
+
 @media(max-width:600px){
-.grid{grid-template-columns:1fr;}
-section{padding:80px 6%;}
-.hero h1{font-size:42px;}
+
+.grid{
+grid-template-columns:1fr;
 }
+
+.hero h1{
+font-size:38px;
+}
+
+}
+
 </style>
 </head>
 
@@ -184,13 +237,11 @@ section{padding:80px 6%;}
 
 <!-- HERO -->
 <section class="hero">
-<div class="hero-container">
-<div class="hero-text">
+<div>
 <h1>Thumbnails That Get <span class="blue-text">Clicks</span></h1>
 <p>I design high converting YouTube thumbnails that increase CTR and capture attention instantly.</p>
 <a href="#featured" class="btn primary">View My Work</a>
 <a href="#contact" class="btn secondary">Hire Me</a>
-</div>
 </div>
 </section>
 
@@ -200,6 +251,7 @@ section{padding:80px 6%;}
 <h2>Featured Work</h2>
 <p class="ctr-line">High CTR Thumbnails That Drive Results</p>
 </div>
+
 <div class="grid">
 <img src="https://iili.io/qJPNtft.jpg">
 <img src="https://iili.io/qJPOxmx.jpg">
@@ -212,26 +264,30 @@ section{padding:80px 6%;}
 
 <!-- BEFORE & AFTER -->
 <section class="before-after">
-<h2>Before & After Results</h2>
+<h2 style="font-size:40px;font-weight:900;margin-bottom:60px;">Before & After</h2>
 
-<!-- Comparison 1 -->
-<div class="compare-box">
-<div class="compare-slider">
+<div class="compare">
+<div>
+<div class="label">Before</div>
 <img src="https://iili.io/qdHjWs1.jpg">
+</div>
+
+<div>
+<div class="label">After</div>
 <img src="https://iili.io/qJPg0FV.jpg">
 </div>
-<div class="label before">Before</div>
-<div class="label after">After</div>
 </div>
 
-<!-- Comparison 2 -->
-<div class="compare-box">
-<div class="compare-slider">
+<div class="compare">
+<div>
+<div class="label">Before</div>
 <img src="https://iili.io/qdHg9El.jpg">
+</div>
+
+<div>
+<div class="label">After</div>
 <img src="https://iili.io/qdHgfTu.jpg">
 </div>
-<div class="label before">Before</div>
-<div class="label after">After</div>
 </div>
 
 </section>
@@ -245,9 +301,10 @@ I am a professional <strong>YouTube Thumbnail Designer</strong> focused on creat
 <br><br>
 I craft thumbnails strategically for podcasts, business, educational, and informational content.
 <br><br>
-<span class="goal-highlight">My goal is simple:</span> create thumbnails that look powerful, feel premium, and deliver real measurable results.
+<span class="goal-highlight">My goal is simple:</span> create thumbnails that look powerful and deliver real measurable results.
 </p>
 </div>
+
 <div class="about-image">
 <img src="https://iili.io/qdvhsp4.jpg">
 </div>
@@ -256,19 +313,21 @@ I craft thumbnails strategically for podcasts, business, educational, and inform
 <!-- CONTACT -->
 <section id="contact" class="contact">
 <h2>Let's Work Together</h2>
+
 <form>
 <input type="text" placeholder="Name">
 <input type="email" placeholder="Email">
 <textarea placeholder="Message"></textarea>
 <button class="btn primary">Send Message</button>
 </form>
-<br>
+
 <div class="social">
 <a href="mailto:hussnaincanvasofficial@gmail.com">Email</a>
 <a href="https://www.instagram.com/hussnain._.canvas/" target="_blank">Instagram</a>
 <a href="https://www.fiverr.com/s/LdAaKgp" target="_blank">Fiverr</a>
 <a href="https://www.linkedin.com/in/hussnaincanvas/" target="_blank">LinkedIn</a>
 </div>
+
 </section>
 
 </body>
